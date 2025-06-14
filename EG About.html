@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routes & Schedules</title>
+    <link rel="stylesheet" href="Ethio Guzo Style.css">
+    <style>
+  nav li:nth-child(4) a::after{
+    width: 100%;
+    background-color: brown;
+  }
+  .container article{
+    margin-left: 20px;
+  }
+  .container h2{
+    margin: 2% 0;
+  }
+  .container ul{
+    margin-top: 1%;
+    margin-left: 5%;
+  }
+  @media (max-width: 768px) {
+    .container h2{
+      margin: 5% 0;
+    }
+  }
+</style>
+</head>
+<body>
+    <header>
+        <nav>  
+            <li id="logo">
+                <img src="https://github.com/Birhanu28/Ethio-Guzo/blob/main/EG%20Logo.png?raw=true" alt="EG logo">
+                <h1>Ethio Guzo</h1>
+            </li>
+            <li><a href="Ethio Guzo N.html">Home</a></li>
+            <li><a href="EG Routes & Schedules.html">Routes & Schedules</a></li>
+            <li><a href="EG About.html">About Us</a></li>
+            <li><a href="EG Contact.html">Contact Us</a></li>
+            <li><a href="EG Help.html">Help</a></li>
+            <li id="profileBtnContainer"><b id="profileBtn" onclick="show_user_profile()">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+            </b></li>            
+            <li class="onPhoneMenuBtn" onclick="show_menu()">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </li>
+        </nav>
+        <div id="onPhoneMenu">
+                <h1 style="color: #db7412;padding: 15px 20px;font-size: 30px;">Ethio Guzo</h1>
+
+                <span style="position: absolute;right: 3%;top: 2%;cursor: pointer;color: brown;" onclick="close_menu()">
+                 <svg style="width: 30px;height: 30px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                 </svg>
+                </span>
+            <ul>
+            
+            <li><a onclick="show_user_profile()">My Profile</a></li>
+            <li><a href="Ethio Guzo N.html">Home</a></li>
+            <li><a href="EG Routes & Schedules.html">Routes & Schedules</a></li>
+            <li><a href="EG About.html">About Us</a></li>
+            <li><a href="EG Contact.html">Contact Us</a></li>
+            <li><a href="EG Help.html">Help</a></li>
+            <li><a href="EG Bookings.html">My Bookings</a></li>
+            <li><a href="">Sign Out</a></li>
+           </ul>
+        </div>
+    </header>
+    <main>
+      <div id="user_profile">
+      
+        <div id="closeProfile" onclick="close_user_profile()"><</div>
+       
+        <div class="user_Info">
+            <h1 id="userGender">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg></h1>
+            <h2 id="userName" class="user_Infos">Name: </h2>
+            <a href="" target="_blank" id="userAddress" class="user_Infos">Address: Ethiopia, </a>
+            <h2 id="userEmail" class="user_Infos">Email: </h2>
+            <h2 id="userPhoneNumber" class="user_Infos">Phone No. : </h2>
+            <a href="EG Bookings.html" id="myBookingsBtn">My Bookings</a>
+            <button id="signOutBtn" class="user_Infos" onclick="signOut()"><b>Sign Out</b></button>
+        </div>
+    </div>
+
+
+    <section class="container" id="bookingFormContainer">
+      <span onclick="closeBookingFormContainer()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </span>
+      <h1>Book Your Trip with Ethio Guzo</h1>
+      <p>Use the form below to reserve your seat in just a few clicks. Travel made simple with Ethio Guzo.</p>
+
+    <form>
+      <section>
+        <div>
+         <label>Full Name:</label>
+         <input type="text" required placeholder="Your Name">
+         <br>
+         <label>From:</label>
+       <select required>
+        <option value="">Select Departure City</option>
+        <option>Gondar</option>
+        <option>Bahir Dar</option>
+        <option>Addis Ababa</option>
+       </select>
+        <br>
+        <label>Date:</label>
+        <input type="date" required>
+    
+       </div>
+  
+       <div>
+        <label>Email:</label>
+        <input type="email" required placeholder="you@example.com">
+        <br>
+        <label>To:</label>
+       <select required>
+         <option value="">Select Destination</option>
+         <option>Gondar</option>
+         <option>Bahir Dar</option>
+         <option>Addis Ababa</option>
+       </select>
+        <br>
+        <label>Preferred Time:</label>
+       <select required>
+         <option>6:00 AM</option>
+         <option>7:00 AM</option>
+         <option>2:00 PM</option>
+         <option>3:00 PM</option>
+       </select>
+       </div>
+       <div>
+        <label>Phone Number:</label>
+        <input type="tel" required placeholder="+251...">
+        <br>
+        <label>Passangers:</label>
+        <input type="number" required placeholder="Passangers" min="1" value="1">
+        <br>
+        <label>Preferred Seat</label>
+         <input type="number" min="1">
+      
+       </div>
+       
+       </div>
+      </section>
+      <label style="margin-top: 10px;margin-bottom: 0;text-align: left;">Payment Method:</label>
+  <select id="paymentMethod">
+    <option value="">PayPal</option>
+    <option value="">Telebirr</option>
+    <option value="">Bank</option>
+  </select>
+  <br>
+  <button type="submit" style="display: flex;align-items: center;justify-content: space-around;gap: 5px;">
+    Book Now
+    
+      <svg style="width: 20px;height: 20px;" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+      </svg>
+    
+  </button>
+  
+</form>
+     </section>
+
+
+   <section id="message">
+  <svg onclick="close_message()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+  </svg>
+    <h2 id="messageH1"></h2>
+    <p id="messageP"></p>
+</section>
+
+
+    <section class="container">
+        <h1>About Ethio Guzo</h1>
+
+
+<h2>Company Overview</h2>
+<p>Ethio Guzo is a modern and customer-focused bus transportation service operating routes between Gondar, Bahir Dar, and Addis Ababa. With a commitment to safety, comfort, and reliability, we provide high-quality intercity travel experiences for locals, tourists, and professionals alike.</p>
+
+<h2>Mission</h2>
+<p>To connect Ethiopian cities with safe, affordable, and comfortable transportation, while delivering exceptional customer service at every step of the journey.</p>
+
+<h2>Vision</h2>
+<p>To become Ethiopia’s most trusted and innovative intercity bus transportation company, setting the standard for quality, sustainability, and digital convenience.</p>
+
+<h2>Our History</h2>
+<p>Ethio Guzo was founded in 2025 in Gondar with the goal of solving intercity travel challenges by offering dependable and tech-enabled transportation solutions. What began with a single bus and a vision has now grown into a trusted name along major northern routes.</p>
+
+<h2>Our Fleet</h2>
+<p>We maintain a modern and well-serviced fleet to ensure that every journey is smooth, punctual, and safe. All our buses are equipped with:</p>
+
+<ul>
+  <li>Comfortable reclining seats</li>
+  <li>Air conditioning and ventilation</li>
+  <li>Onboard charging ports</li>
+  <li>Luggage compartments</li>
+  <li>GPS tracking and speed control</li>
+  <li>Sanitization and cleanliness protocols</li>
+</ul>
+
+<h2>Bus Types in Our Fleet</h2>
+<ol>
+  <li style="font-size: 17px;font-weight: 700;">Standard Coach</li>
+  <article style="margin: 13px 0px;">Affordable travel with all essential features including cushioned seats, fans, and clean cabins.</article>
+  <li style="font-size: 17px;font-weight: 700;">Luxury Coach</li>
+  <article style="margin: 13px 0px;">Enhanced comfort with A/C, wide seats, entertainment system, bottled water, and snacks.</article>
+</ol>
+
+<h2>Customer Testimonials</h2>
+<article>"Ethio Guzo made my trip from Gondar to Bahir Dar so smooth and professional! Clean buses and friendly staff."
+— Tigist Alemu, Addis Ababa</article>
+<br>
+<article>"On-time service with great pricing. I love the online booking system!"
+— Yohannes Belay, Bahir Dar</article>
+<br>
+<article>"The best bus experience I've had in Ethiopia. Highly recommend their luxury option."
+— Mekdes Girma, Gondar</article>
+    </section>
+
+
+    <!-- <div class="backBtn">
+     <a href="#hero">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+      </svg>
+    </a></div> -->
+    
+    </main>
+
+
+    <footer>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; width: 100%; margin: auto;">
+    
+
+    <div>
+      <h3>About Ethio Guzo</h3>
+      <p>
+        Ethio Guzo is a trusted and affordable bus transportation service connecting Gondar, Bahir Dar, and Addis Ababa.
+        We make travel smooth, reliable, and safe.
+      </p>
+    </div>
+    
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="Ethio Guzo N.html" style="color: white;">Home</a></li>
+        <li><a href="EG About.html" style="color: white;">About Us</a></li>
+        <li><a href="EG Contact.html" style="color: white;">Contact</a></li>
+        <li><a href="EG Bookings.html" style="color: white;">View Ticket</a></li>
+        <li><a onclick="showBookingFormContainer()" style="text-decoration-line: underline; color: white;cursor: pointer;">Book Now</a></li>
+      </ul>
+    </div>
+    
+   
+    <div>
+      <h3>Legal</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><p onclick="msg_privacy_policy()" style="color: white;text-decoration-line: underline;cursor: pointer;">Privacy Policy</p></li>
+        <li><p onclick="msg_terms()" style="color: white;text-decoration-line: underline;cursor: pointer;">Terms & Conditions</p></li>
+        <li><p style="color: white;text-decoration-line: line-through;">Refund Policy</p></li>
+      </ul>
+    </div>
+    
+    
+    <div>
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:ethioguzo@gmail.com" style="color: white;">ethioguzo@gmail.com</a></p>
+      <p>Phone: +251 912 345 678</p>
+      <p>Location: Gondar, Ethiopia</p>
+      <div style="margin-top: 10px;">
+      </div>
+    </div>
+  </div>
+  
+  
+  <div style="text-align: center; padding-top: 20px; border-top: 1px solid #ccc;">
+    <p>© 2025 Ethio Guzo. All Rights Reserved.</p>
+  </div>
+</footer>
+    <script src="./Ethio Guzo JS.js"></script>
+</body>
+</html>

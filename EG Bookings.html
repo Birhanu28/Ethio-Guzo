@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" href="Ethio Guzo Style.css">
+    <style>
+        body{
+            background-color: wheat;
+            margin: 0;
+            padding: 0;
+        }
+        #bookingsBackBtn{
+            box-sizing: border-box;
+            padding: 10px;
+            position: absolute;
+            left: 20px;
+            font-size: clamp(20px, 25px, 30px);
+            font-weight: 900;
+            transform: scale(0.7, 1.4);
+            text-decoration: none;
+        }
+        .container{
+            width: 60%;
+            margin: 2rem auto;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px black;
+        }
+        #ticket1{
+            background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa4.jpeg?raw=true);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #ticket2{
+            background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar3.jpeg?raw=true);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #ticket3{
+            background: url(https://raw.githubusercontent.com/Birhanu28/Ethio-Guzo/refs/heads/main/gondar4.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            text-align: center;
+            color: #eb8220;
+            margin: 3%;
+        }
+        p{
+            text-align: center;
+            color: #c05f04;
+            font-weight: 600;
+            margin: 1% 0;
+        }
+        h2{
+            color: #c05f04;
+            padding: 10px;
+            margin: 3%;
+            border-bottom: 3px solid #eb8220;
+        }
+        h3{
+            margin: 1.2% 0;
+            color: wheat;
+            
+        }
+        span{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 100;
+        }
+        @media (max-width: 768px) {
+            .container{
+                width: 90%;
+            }
+            h3{
+                font-size: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="Ethio Guzo N.html" id="bookingsBackBtn"><</a>
+    <h1>My bookings</h1>
+    <p>Manage your upcoming and past travel experiences with Ethio Guzo.</p>
+    <p>Please arrive at the station 30 minutes before your departure time.</p>
+     <h2>Upcomming Bookings</h2>
+    <section class="container" id="ticket1">
+        <h3>Booking ID: <span id="bookingId">EG25476359</span></h3>
+        <h3>Departure City: <span id="bookingId">Gondar</span></h3>
+        <h3>Destination City: <span id="bookingId">Addis Ababa</span></h3>
+        <h3>Date & Time: <span id="bookingId">June 8, 2025 - 21:21</span></h3>
+        <h3>Travelers: <span id="bookingId">3</span></h3>
+        <h3>Seat: <span id="bookingId">EG - 19</span></h3>
+    </section>
+
+    <section class="container" id="ticket2">
+        <h3>Booking ID: <span id="bookingId">EG54398612</span></h3>
+        <h3>Departure City: <span id="bookingId">Addis Ababa</span></h3>
+        <h3>Destination City: <span id="bookingId">Bahir Dar</span></h3>
+        <h3>Date & Time: <span id="bookingId">july 12, 2025 - 07:30</span></h3>
+        <h3>Travelers: <span id="bookingId">5</span></h3>
+        <h3>Seat: <span id="bookingId">EG - 09</span></h3>
+    </section>
+
+    <section class="container" id="ticket3">
+        <h3>Booking ID: <span id="bookingId">EG76940920</span></h3>
+        <h3>Departure City: <span id="bookingId">Bahir Dar</span></h3>
+        <h3>Destination City: <span id="bookingId">Gondar</span></h3>
+        <h3>Date & Time: <span id="bookingId">August 17, 2025 - 03:00</span></h3>
+        <h3>Travelers: <span id="bookingId">7</span></h3>
+        <h3>Seat: <span id="bookingId">EG - 03</span></h3>
+    </section>
+    <h2>Past Bookings</h2>
+    <article style="text-align: center;font-weight: 100;margin: 7rem;color: grey;">No past Bookings Here</article>
+    <script src="Ethio Guzo JS.js"></script>
+</body>
+</html>

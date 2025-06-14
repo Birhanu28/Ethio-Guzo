@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethio Guzo Transportation</title>
+    <link rel="stylesheet" href="Ethio Guzo Style.css">
+    <style>
+  nav li:nth-child(2) a::after{
+    width: 100%;
+    background-color: brown;
+  }
+</style>
+</head>
+
+
+<body>
+    <header>
+        <nav>  
+            <li id="logo">
+                <img src="https://github.com/Birhanu28/Ethio-Guzo/blob/main/EG%20Logo.png?raw=true" alt="EG logo">
+                <h1>Ethio Guzo</h1>
+            </li>
+            <li><a href="Ethio Guzo N.html">Home</a></li>
+            <li><a href="EG Routes & Schedules.html">Routes & Schedules</a></li>
+            <li><a href="EG About.html">About Us</a></li>
+            <li><a href="EG Contact.html">Contact Us</a></li>
+            <li><a href="EG Help.html">Help</a></li>
+            <li id="profileBtnContainer"><b id="profileBtn" onclick="show_user_profile()">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+            </b></li>            
+            <li class="onPhoneMenuBtn" onclick="show_menu()">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </li>
+        </nav>
+        <div id="onPhoneMenu">
+                <h1 style="color: #db7412;padding: 15px 20px;font-size: 30px;">Ethio Guzo</h1>
+
+                <span style="position: absolute;right: 3%;top: 2%;cursor: pointer;color: brown;" onclick="close_menu()">
+                 <svg style="width: 30px;height: 30px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                 </svg>
+                </span>
+            <ul>
+            
+            <li><a onclick="show_user_profile()">My Profile</a></li>
+            <li><a href="Ethio Guzo N.html">Home</a></li>
+            <li><a href="EG Routes & Schedules.html">Routes & Schedules</a></li>
+            <li><a href="EG About.html">About Us</a></li>
+            <li><a href="EG Contact.html">Contact Us</a></li>
+            <li><a href="EG Help.html">Help</a></li>
+            <li><a href="EG Bookings.html">My Bookings</a></li>
+            <li><a href="">Sign Out</a></li>
+           </ul>
+        </div>
+    </header>
+     <main>
+      
+    <div id="user_profile">
+      
+        <div id="closeProfile" onclick="close_user_profile()"><</div>
+       
+        <div class="user_Info">
+            <h1 id="userGender">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg></h1>
+            <h2 id="userName" class="user_Infos">Name: </h2>
+            <a href="" target="_blank" id="userAddress" class="user_Infos">Address: Ethiopia, </a>
+            <h2 id="userEmail" class="user_Infos">Email: </h2>
+            <h2 id="userPhoneNumber" class="user_Infos">Phone No.: </h2>
+            <a href="EG Bookings.html" id="myBookingsBtn">My Bookings</a>
+            <button id="signOutBtn" class="user_Infos" onclick="signOut()"><b>Sign Out</b></button>
+        </div>
+    </div>
+    
+     <section class="container" id="bookingFormContainer">
+      <span onclick="closeBookingFormContainer()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </span>
+      <h1>Book Your Trip with Ethio Guzo</h1>
+      <p>Use the form below to reserve your seat in just a few clicks. Travel made simple with Ethio Guzo.</p>
+
+    <form>
+      <section>
+        <div>
+         <label>Full Name:</label>
+         <input type="text" required placeholder="Your Name">
+         <br>
+         <label>From:</label>
+       <select required>
+        <option value="">Select Departure City</option>
+        <option>Gondar</option>
+        <option>Bahir Dar</option>
+        <option>Addis Ababa</option>
+       </select>
+        <br>
+        <label>Date:</label>
+        <input type="date" required>
+    
+       </div>
+  
+       <div>
+        <label>Email:</label>
+        <input type="email" required placeholder="you@example.com">
+        <br>
+        <label>To:</label>
+       <select required>
+         <option value="">Select Destination</option>
+         <option>Gondar</option>
+         <option>Bahir Dar</option>
+         <option>Addis Ababa</option>
+       </select>
+        <br>
+        <label>Preferred Time:</label>
+       <select required>
+         <option>6:00 AM</option>
+         <option>7:00 AM</option>
+         <option>2:00 PM</option>
+         <option>3:00 PM</option>
+       </select>
+       </div>
+       <div>
+        <label>Phone Number:</label>
+        <input type="tel" required placeholder="+251...">
+        <br>
+        <label>Passangers:</label>
+        <input type="number" required placeholder="Passangers" min="1" value="1">
+        <br>
+        <label>Preferred Seat</label>
+         <input type="number" min="1">
+      
+       </div>
+       
+       </div>
+      </section>
+      <label style="margin-top: 10px;margin-bottom: 0;text-align: left;">Payment Method:</label>
+  <select id="paymentMethod">
+    <option value="">PayPal</option>
+    <option value="">Telebirr</option>
+    <option value="">Bank</option>
+  </select>
+  <br>
+  <button type="submit" style="display: flex;align-items: center;justify-content: space-around;gap: 5px;">
+    Book Now
+    
+      <svg style="width: 20px;height: 20px;" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+      </svg>
+    
+  </button>
+  
+</form>
+     </section>
+
+
+
+<section id="message">
+  <svg onclick="close_message()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+  </svg>
+    <h2 id="messageH1"></h2>
+    <p id="messageP"></p>
+</section>
+
+
+
+    <section id="hero">
+     <h1 id="time"></h1>
+    <div class="heroText">
+      <h1 id="websiteName">Wellcome to<br>Ethio Guzo<br>transportation</h1><br>
+      <div class="typewriter-container">
+        <span class="typewriter-text"></span>
+    </div>
+    </div>
+    <button id="bookNow" onclick="showBookingFormContainer()">Book Now</button>
+    <ul>
+      
+        <li><a href="">
+           <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+          </svg>
+        </a></li>
+        <li><a href="">
+           <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok">
+             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+             <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+          </svg>
+        </a></li>
+        <li><a href="">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+          </svg>
+        </a></li>
+        <li><a href="">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+            <path d="M16.5 7.5v.01" />
+          </svg>
+        </a></li>
+        
+        <li><a href="">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+          </svg>
+        </a></li>
+    </ul>
+
+
+    
+
+
+    </section>
+    <section class="container" id="wellcome">
+        <h1>Welcome to Ethio Guzo</h1>
+        <p style="margin-top: 2%;">Ethio Guzo is your trusted travel partner for safe, reliable, and affordable bus transportation between Gondar, Bahir Dar, and Addis Ababa. Whether you're commuting for business, studies, or family, we ensure your journey is smooth and comfortable.</p>
+
+    <div id="wellcomeContentContainer">
+      <section>
+     <h2>Why Travel with Ethio Guzo?</h2>
+      <ul>
+       <li>Clean, modern, and air-conditioned buses</li>
+       <li>Timely daily departures</li>
+       <li>Easy online booking</li>
+       <li>Guaranteed seating and comfort</li>
+       <li>24/7 Customer Support</li>
+      </ul>
+    </section>
+    <section>
+     <h2>Popular Routes</h2>
+      <ul>
+        <li>Gondar <b style="font-size: 10px;">⇄</b> Bahir Dar</li>
+        <li>Bahir Dar <b style="font-size: 10px;">⇄</b> Addis Ababa</li>
+        <li>Gondar <b style="font-size: 10px;">⇄</b> Addis Ababa (via Bahir Dar)</li>
+      </ul>
+        <a href="EG Routes & Schedules.html" style="color: blue;"><strong>View Full Schedule</strong></a>
+        <br><br>
+      </section>
+    
+
+      <section>
+       <h2 style="margin-bottom: 3%;">Customer Testimonials</h2>
+       <blockquote style="white-space: wrap;">“Ethio Guzo made my trip from Gondar to Addis Ababa incredibly smooth and stress-free. Highly recommended!” - Mikiyas K.</blockquote>
+        <strong onclick="showBookingFormContainer()" style="color: blue;text-decoration: underline;cursor: pointer;">Book Your Ticket Now</strong>
+      </section>
+    </section>
+     </div>
+     <section class="container" id="destinationsImgContainer" style="background-color: transparent;border: hidden;box-shadow: none;">
+        <h1 id="ourDestination">Our Destinations</h1>
+        <section id="destinationImgContainer"">
+            <div class="destinationImg" id="addisababa">
+                <h3>Addis Ababa</h3>
+            </div>
+            <div class="destinationImg" id="gondar">
+                <h3>Gondar</h3>
+            </div>
+            <div class="destinationImg" id="bahirdar">
+                <h3>Bahir Dar</h3>
+            </div>
+        </section>
+     </section>
+
+     <div class="backBtn">
+     <a href="#hero">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+      </svg>
+    </a></div>
+    </main>
+
+
+    <footer>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; width: 100%; margin: auto;">
+    
+
+    <div>
+      <h3>About Ethio Guzo</h3>
+      <p>
+        Ethio Guzo is a trusted and affordable bus transportation service connecting Gondar, Bahir Dar, and Addis Ababa.
+        We make travel smooth, reliable, and safe.
+      </p>
+    </div>
+    
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="Ethio Guzo N.html" style="color: white;">Home</a></li>
+        <li><a href="EG About.html" style="color: white;">About Us</a></li>
+        <li><a href="EG Contact.html" style="color: white;">Contact</a></li>
+        <li><a href="EG Bookings.html" style="color: white;">View Ticket</a></li>
+        <li><a onclick="showBookingFormContainer()" style="text-decoration-line: underline; color: white;cursor: pointer;">Book Now</a></li>
+      </ul>
+    </div>
+    
+   
+    <div>
+      <h3>Legal</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><p onclick="msg_privacy_policy()" style="color: white;text-decoration-line: underline;cursor: pointer;">Privacy Policy</p></li>
+        <li><p onclick="msg_terms()" style="color: white;text-decoration-line: underline;cursor: pointer;">Terms & Conditions</p></li>
+        <li><p style="color: white;text-decoration-line: line-through;">Refund Policy</p></li>
+      </ul>
+    </div>
+    
+    
+    <div>
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:ethioguzo@gmail.com" style="color: white;">ethioguzo@gmail.com</a></p>
+      <p>Phone: +251 912 345 678</p>
+      <p>Location: Gondar, Ethiopia</p>
+      <div style="margin-top: 10px;">
+      </div>
+    </div>
+  </div>
+  
+  
+  <div style="text-align: center; padding-top: 20px; border-top: 1px solid #ccc;">
+    <p>© 2025 Ethio Guzo. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+</div>
+    <script src="./Ethio Guzo JS.js"></script>
+    </body>
+</html>
+ <!-- if(userInput_name.value = ' '){
+    userInput_name.style.borderStyle = 'solid';
+    userInput_name.style.borderColor = 'red';
+    name_check.textContent = 'Please enter your name!'  
+  }
+  else if(userInput_age.value = ' '){
+    userInput_age.style.borderStyle = 'solid';
+    userInput_age.style.borderColor = 'red';
+    age_check.textContent = 'Please enter your age!'
+  }
+  else if(userInput_email.value = ' '){
+    userInput_email.style.borderStyle = 'solid';
+    userInput_email.style.borderColor = 'red';
+    email_check.textContent = 'Please enter your email!'
+  }
+  else if(userInput_phone.value += ' '){
+    userInput_phone.style.borderStyle = 'solid';
+    userInput_phone.style.borderColor = 'red';
+    phone_check.textContent = 'Please enter your phone!'
+  }
+  else if(userInput_address.value = ' '){
+    userInput_address.style.borderStyle = 'solid';
+    userInput_address.style.borderColor = 'red';
+    address_check.textContent = 'Please enter your address!'
+  } --> 
+
+
+  
+<!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+</svg>
+
+
+
+
+
+
+
+<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-ticket"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2" /><path d="M15 11l0 2" /><path d="M15 17l0 2" /><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" /></svg>
+<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
+</svg> -->
+
+<!-- @keyframes gondar {
+    0%{
+        background: url(gondar1.jpeg);
+    }
+    12.5%{
+        background: url(gondar1.jpeg);
+        backdrop-filter: (50px);
+    }
+    25%{
+        background: url(gondar2.jpeg);
+    }
+    37.5%{
+        background: url(gondar2.jpeg);
+        backdrop-filter: (50px);
+    }
+    50%{
+        background: url(gondar3.jpeg);
+    }
+    62.5%{
+        background: url(gondar3.jpeg);
+        backdrop-filter: (50px);
+    }
+    75%{
+        background: url(gondar4.jpeg);
+    }
+    87.5%{
+        background: url(gondar4.jpeg);
+        backdrop-filter: (50px);
+    }
+    100%{
+        background: url(gondar1.jpeg);
+        backdrop-filter: (50px);
+    }
+}
+@keyframes bahirdar {
+    0%{
+        background: url(bahirdar1.jpeg);
+    }
+    12.5%{
+        background: url(bahirdar1.jpeg);
+        backdrop-filter: (50px);
+    }
+    25%{
+        background: url(bahirdar2.jpeg);
+    }
+    37.5%{
+        background: url(bahirdar2.jpeg);
+        backdrop-filter: (50px);
+    }
+    50%{
+        background: url(bahirdar3.jpeg);
+    }
+    62.5%{
+        background: url(bahirdar3.jpeg);
+        backdrop-filter: (50px);
+    }
+    75%{
+        background: url(bahirdar4.jpeg);
+    }
+    87.5%{
+        background: url(bahirdar4.jpeg);
+        backdrop-filter: (50px);
+    }
+    100%{
+        background: url(bahirdar1.jpeg);
+        backdrop-filter: (50px);
+    }
+} -->

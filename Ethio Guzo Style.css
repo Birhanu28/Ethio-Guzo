@@ -1,0 +1,1015 @@
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html{
+    scroll-behavior: smooth;
+    }
+    body{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        overflow-x: hidden;
+        background: wheat;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    header{
+        box-sizing: border-box;
+    }
+    nav{
+        background: #eb8220;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 40px;
+        list-style: none;
+        padding: 12px;
+    }
+    nav a{
+        text-decoration: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 900;
+        font-size: clamp(15px, 15px, 100px);
+        color: white;
+        padding: 3px;
+        border: hidden;
+        transition: .6s;
+        position: relative;
+    }
+    nav a::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        position: absolute;
+        background-color: wheat; 
+        bottom: -5px;
+        left: 0;  
+        transition: .5s;    
+    }
+    nav a:hover::after{
+        width: 100%;
+    }
+     #logo{
+        text-transform: uppercase;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 2;
+        cursor: default;
+        pointer-events: none;
+    }
+    #logo img{
+        width: 120px;
+        height: 35px;
+        margin: 0;
+    }
+    #logo h1{
+        font-variant: small-caps;
+        font: 95% georgia;
+        color: wheat;
+        font-weight: 700;
+        margin: 0;
+    }
+    nav li:nth-child(7){
+        border: 1.4px solid #a04d00;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 3px;
+        color: wheat;
+        font-family: serif;
+        cursor: pointer;
+        width: fit-content;
+        height: fit-content;
+        transition: .5s;
+    }
+    nav li:nth-child(7):hover{
+        background-color: #803e00;
+    }
+    nav li:nth-child(7) svg{
+        width: 23px;
+        height: 23px;
+    }
+#user_profile{
+    display: none;
+    box-sizing: border-box;
+    z-index: 15;
+    width: 27rem;
+    height: fit-content;
+    padding: 10px 0px;
+    background: linear-gradient(45deg, #9e4d01, #eb8220);
+    right: 2%;
+    top: 8%;
+    border-radius: 25px;
+    position: absolute;
+}
+#closeProfile{
+    color: wheat;
+    font-size: 22px;
+    transform: scaleY(1.8);
+    margin: 10px 0px 0px 15px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+.user_Info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    padding: 5px 30px;
+}
+.user_Infos{
+    font-size: clamp(15px, 22px, 25px);
+    color: wheat;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+}
+.user_Info #userGender{
+    width: 20%;
+    height: 20%;
+    color: wheat;
+    margin: 0px auto;
+    cursor: default;
+}
+.user_Info #userAddress{
+    text-decoration-line: underline;
+    text-decoration-color: wheat;
+}
+.user_Info #userAddress a{
+    color: rgb(248, 235, 212);
+}
+.user_Info #myBookingsBtn{
+    background-color: #eb8220;
+    color: wheat;
+    padding: 10px 5px;
+    border: hidden;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: georgia;
+    font-size: clamp(10px, 15px, 20px);
+    font-weight: 900;
+    width: 80%;
+    margin: 1rem auto;
+    cursor: pointer;
+    transition: .7s;
+}
+.user_Info #myBookingsBtn:hover{
+    background-color: #9b4b00;
+}
+
+.user_Info #signOutBtn{
+    width: fit-content;
+    margin: 0px auto;
+    padding: 7px 30px;
+    outline: none;
+    border: 2px solid wheat;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: clamp(10px, 15px, 20px);
+    color: wheat;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+.user_Info #signOutBtn:hover{
+    background-color: wheat;
+    color: #eb8220;
+    font-weight: 900;
+}
+#hero{
+    background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/file_00000000b3cc61f8a67fa6a838434d24.png?raw=true);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#time{
+    color: white;
+    font-family: serif;
+    font-size: clamp(10px, 20px, 250px);
+    top: 15%;
+    right: 5%;
+    position: absolute;
+}
+ .heroText{
+    margin-right: auto;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+} 
+#websiteName{
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: clamp(3vw, 3vw, 5vw);
+    text-transform: uppercase;
+    letter-spacing: 2%;
+    line-height: 170%;
+    color: wheat;
+    margin-top: 30%;
+    padding: 10px;
+    border-left: 5px solid #eb8220;
+}
+.typewriter-container {
+            position: absolute;
+            bottom: 37%;
+            left: 2%;
+            display: inline-block;
+            margin-right: auto;
+            margin-top: -30px;
+        }
+        .typewriter-text {
+            white-space: nowrap;
+            border-right: 0.15em solid orange;
+            display: inline-block;
+            vertical-align: top;
+            color: wheat;
+            font-family: georgia;
+            font-size: clamp(10px, 20px, 30px);
+            font-weight: 900;
+            animation: blink-caret .75s step-end infinite;
+        }
+        .typewriter-text.typing-active,
+        .typewriter-text.deleting-active {
+            border-right-color: transparent;
+        }
+
+        /* Keyframes for the blinking cursor */
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #eb8220; }
+        }
+#bookNow{
+    padding: 10px;
+    background: #eb82207e;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: clamp(10px, 15px, 20px);
+    font-weight: 700;
+    color: wheat;
+    letter-spacing: 2px;
+    border: 2px solid wheat;
+    border-radius: 15px;
+    position: absolute;
+    cursor: pointer;
+    transition: .4s;
+}
+#bookNow:hover{
+    letter-spacing: 2.5px;
+    color: #a55000;
+    background: rgba(245, 222, 179, 0.795);
+    box-shadow:
+    5px 5px 10px rgba(253, 209, 126, 0.493),
+    -5px 5px 10px rgba(253, 209, 126, 0.493),
+    5px -5px 10px rgba(253, 209, 126, 0.493),
+    -5px -5px 10px rgba(253, 209, 126, 0.493);
+}
+#hero ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15vw;
+    list-style: none; 
+    margin: auto;
+    margin-top: 15%;
+    width: 90%;
+} 
+
+ #hero a{
+        text-decoration: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: clamp(10px, 15px, 20px);
+        font-weight: 700;
+        color: wheat;
+        padding: 7px;
+        border-bottom: 2px solid wheat;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0px;
+        transition:  .7s;
+}
+#hero ul li a:hover{
+    background: linear-gradient(45deg, transparent, wheat, transparent);
+    border-color: wheat;
+    color: rgba(0, 0, 0, 0.5);
+    bottom: 7px;
+}
+.backBtn{
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 8%;
+    right: 5%;
+    background: rgb(131, 86, 3);
+    color: wheat;
+    border: 3px solid rgb(131, 86, 3);
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 70%;
+    transition: .3s;
+  }
+  .backBtn:hover{
+    background-color: transparent;
+    color: brown;
+    border-color: brown;
+    opacity: 100%;
+  }
+  .backBtn a{
+    color: wheat;
+  }
+  .backBtn:hover a{
+    color: brown;
+  }
+  .backBtn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .backBtn a svg{
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg);
+  }
+.container{
+    color: brown;
+    box-sizing: border-box;
+    padding: 13px 20px;
+    margin: 1rem 5rem;
+    
+}
+.container h1{
+    font-size: clamp(20px, 25px, 30px);
+    color: #eb8220;
+    border-bottom:  3px solid #eb8220;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 7%;
+    background: linear-gradient(transparent 40%, wheat);
+}
+.container h2{
+    font-size: clamp(15px, 20px, 25px);
+    white-space: wrap;
+    color: #ce6706;
+    margin: 6% 0;
+}
+.container p{
+    font-size: clamp(15px, 17px, 20px);
+    color: #000;
+    font-weight: 400;
+    margin-left: 25px;
+}
+.container ul li{
+    white-space: wrap;
+    color: brown;
+    font-size: 17px;
+}
+#wellcome{
+    min-width: 80%;
+    max-width: 90%;
+    margin: auto;
+    margin-top: -3%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover;
+}
+#wellcomeContentContainer section{
+    display: inline-block;
+    margin: 3% 5%;
+    align-items: flex-start;
+}
+#wellcomeContentContainer section h2{
+    margin-bottom: 4%;
+}
+#wellcomeContentContainer section ul{
+    margin-left: 10%;
+}
+@keyframes fade {
+    0%{
+    opacity: 0%;
+    bottom: 7%;
+    }
+    50%{
+    opacity: 100%;
+    bottom: 3%;
+    }
+    100%{
+    opacity: 0%;
+    bottom: 7%;
+    }
+}
+#bookingFormContainer{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+    display: none;
+    z-index: 4;
+    box-sizing: border-box;
+    position: fixed;
+    margin: .5rem 5%;
+    width: 90%;
+    padding: 10px;
+}
+#bookingFormContainer span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+#bookingFormContainer span svg{
+    width: 25px;
+    height: 25px;
+}
+#bookingFormContainer h1{
+    padding: 10px;
+    margin: 10px auto;
+    width: 60%;
+    text-align: center;
+    background: transparent;
+}
+#bookingFormContainer p{
+    margin: 1rem;
+    text-align: center;
+}
+#bookingFormContainer form{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#bookingFormContainer form section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+#bookingFormContainer form div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#bookingFormContainer label{
+    font-size: clamp(10px, 18px, 20px);
+    color: #cf6400;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+#bookingFormContainer input, #bookingFormContainer select{
+    max-width: 400px;
+    min-width: 200px;
+    height: 40px;
+    background: wheat;
+    font-weight: 900;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    color: #000000ce;
+    font: 16px georgia;
+    border: 3px solid brown;
+}
+#bookingFormContainer button{
+    box-sizing: border-box;
+    color: brown;
+    background-color: transparent;
+    padding: 10px 20px;
+    font: 16px georgia;
+    border: 3px solid brown;
+    border-radius: 15px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: .5s;
+}
+#bookingFormContainer button:hover{
+    color: wheat;
+    background-color: #eb8220;
+}
+#serviceTypes{
+    display: flex;
+}
+#destinationImgContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px auto;
+    align-items: center;
+    column-gap: 1vw;
+    animation: forImages linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover;
+    
+}
+#ourDestination{
+    border: hidden;
+    text-align: center;
+    font-size: clamp(25px, 30px, 35px);
+}
+.destinationImg{
+    width: 35%;
+    height: 33vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+}
+@keyframes forImages {
+    0%{
+    width: 10%;
+    }
+    50%{
+    width: 100%;
+    }
+    100%{
+    width: 100%;
+    }
+}
+.destinationImg h3,.destinationImg p{
+    display: none;
+}
+.destinationImg::after{
+    content: '';
+    /* background-color: rgba(0, 0, 0, 0.459); */
+    color: wheat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+/* .destinationImg::after:hover .destinationImg::after{
+    background-color: rgba(245, 222, 179, 0.664);
+} */
+#addisababa{
+    animation: addisababa 20s linear infinite;
+    background-position: center;
+}
+#gondar{
+    animation: gondar 20s linear infinite;
+    background-position: center;
+}
+#bahirdar{
+    animation: bahirdar 20s linear infinite;
+    background-position: center;
+}
+@keyframes addisababa {
+    0%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa1.jpeg?raw=true);
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    12.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa1.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    25%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa2.jpeg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    37.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa2.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    50%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa3.jpeg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    62.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa3.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    75%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa4.jpeg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    87.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa4.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    100%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/addisababa1.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+@keyframes gondar {
+    0%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/gondar1.jpg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    12.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/gondar1.jpg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    25%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/gondar2.jpg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    37.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/gondar2.jpg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    50%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/gondar3.jpg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    62.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/gondar3.jpg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    75%{
+        background: url(https://raw.githubusercontent.com/Birhanu28/Ethio-Guzo/refs/heads/main/gondar4.webp);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    87.5%{
+        background: url(https://raw.githubusercontent.com/Birhanu28/Ethio-Guzo/refs/heads/main/gondar4.webp);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    100%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/gondar1.jpg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+} 
+@keyframes bahirdar {
+    0%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar1.jpeg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    12.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar1.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    25%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar2.jpeg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    37.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar2.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    50%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar3.jpeg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    62.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar3.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    75%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar4.jpg?raw=true);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    87.5%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar4.jpg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    100%{
+        background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/bahirdar1.jpeg?raw=true);
+        backdrop-filter: (50px);
+         background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+#helpSearchBoxContainer{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: fit-content;
+    padding-top: 20px;
+}
+#helpSearchBox{
+    box-sizing: border-box;
+    outline: none;
+    width: 20rem;
+    height: 100%;
+    background: transparent;
+    border-bottom: 5px solid brown;
+    border-radius: 10px;
+    background-color: wheat;
+    color: brown;
+    font-size: clamp(10px, 15px, 20px);
+    font-weight: 900;
+    padding: 10px 13px;
+}
+#helpSearchBoxContainer svg{
+    box-sizing: border-box;
+    padding: 3px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid brown;
+    border-radius: 10px;
+    color: brown;
+    background-color: transparent;
+    cursor: pointer;
+}
+#helpSearchBoxContainer svg:hover{
+    color: wheat;
+    background-color: brown;
+}
+#message{
+    box-sizing: border-box;
+    position: fixed;
+    top: 10px;
+    left: 27.5%;
+    z-index: 6;
+    max-width: 45%;
+    height: fit-content;
+    background-color: #eb8220;
+    border: 3px solid wheat;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 1rem auto;
+}
+#message svg{
+    color: white;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+#message h2{
+    margin: 2%;
+    text-align: center;
+    color: white;
+}
+#message p{
+    margin: 2%;
+    text-align: center;
+    color: white;
+}
+footer{
+    background-color: #eb8220; 
+    color: white; 
+    padding: 40px 20px;
+}
+footer div{
+    flex: 1 1 250px; 
+    margin-bottom: 20px;
+}
+footer h3{
+    color: #8b5600;
+}
+ .onPhoneMenuBtn{
+    display: none;
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    width: 30px;
+    height: 50px;
+    font-size: 35px;
+    color: aqua;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+ #onPhoneMenu{
+    position: fixed;
+    right: 0%;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(245, 222, 179, 0.788);
+    backdrop-filter: blur(10px);
+    width: 50%;
+    height: 100vh;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.288);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+ }
+ #onPhoneMenu ul{
+    list-style: none;
+    margin-top: 5%;
+    width: 100%;
+ }
+ 
+ #onPhoneMenu ul li a{
+    display: block;
+    height: 100%;
+    padding: 10px;
+    padding-left: 25px;
+    text-decoration: none;
+    font-size: 17px;
+    color: brown;
+ }
+ #onPhoneMenu ul li a:hover{
+    background-color: rgb(189, 165, 120);
+ } 
+ @media (max-width: 768px){
+    nav a{
+      display: none;
+    }
+    nav li:nth-child(7){
+        display: none;
+    }
+    #websiteName{
+        position: absolute;
+        border: hidden;
+        top: -20%;
+        left: 25%;
+        width: 50%;
+        text-align: center;
+        font-size: 200%;
+    }
+    .typewriter-container {
+        position: absolute;
+        width: 50%;
+        bottom: 20%;
+        left: 25%;
+        text-align: center;
+    }
+    .typewriter-text{
+        backdrop-filter: blur(10px);
+        text-wrap: wrap;
+    }
+    #time{
+        position: absolute;
+        top: 10%;
+        right: 5%;     
+    }
+     #bookingFormContainer{
+        position: absolute;
+     }
+    #destinationImgContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        margin: 20px auto;
+        margin-bottom: 10%;
+        width: 100%;
+    }
+    .destinationImg{
+        width: 100%;
+    }
+    .onPhoneMenuBtn{
+        display: block;
+    }
+} 
+@media (max-width: 425px) {
+    #logo{
+        margin-left: -7%;
+    }
+    #logo h1{
+        font-size: 90%;
+        text-wrap: nowrap;
+    }
+    #user_profile{
+    position: fixed;
+    width: 95%;
+    right: 2.5%;
+   }
+    #message{
+    max-width: 95%;
+    left: 2.5%;
+    
+}
+   #message svg{
+    width: 17px;
+    height: 17px;
+}
+#message h2{
+    font-size: 15px;
+}
+#message p{
+    font-size: 13px;
+}
+     #time{
+        font-size: 90%;
+        top: 12%;
+     }
+     #websiteName{
+        font-size: 90%;
+        top: 0;
+     }
+     .typewriter-text{
+        font-size: 90%;
+     }
+     #bookingFormContainer form section{
+        flex-wrap: wrap;
+     }
+     #destinationImgContainer{
+        margin: 20px auto;
+        margin-bottom: 10%;
+        width: 100%;
+    }
+    .destinationImg{
+        width: 100%;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #onPhoneMenu{
+        width: 100%;
+    }
+    #helpSearchBox{
+    width: 80%;
+   }
+#helpSearchBoxContainer svg{
+    width: 40px;
+    height: 40px;
+    }
+}

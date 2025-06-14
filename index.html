@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <link rel="stylesheet" href="EthioGuzoFormStyle.css">
+</head>
+<body>
+    <fieldset>
+            <legend>Sign In</legend>
+        <form action="Ethio Guzo Loading.html" id="signInForm" method="GET">
+            <label for="">Full Name:</label><br>
+            <input type="text" id="userInput_name" class="userInputField" placeholder="Enter Your Name"><br>
+            <p id="name_check" class="userInput_checker"></p>
+            <label for="">Gender: </label>
+            <input type="radio" name="gender" checked><label for="">Male</label>
+            <input type="radio" name="gender"><label for="">Female</label><br><br>
+            <label for="">Age: </label>
+            <input type="number" id="userInput_age" class="userInputField" placeholder="Enter Your Age"><br>
+            <p id="age_check" class="userInput_checker"></p>
+            <label for="">Email:</label><br>
+            <input type="email" id="userInput_email" class="userInputField" placeholder="Enter Your Email"><br>
+            <p id="email_check" class="userInput_checker"></p>           
+            <label for="">Phone No.:</label><br>
+            <input type="tel" id="userInput_phone" class="userInputField" value="+251" placeholder="Enter Your Phone Number"><br>
+            <p id="phone_check" class="userInput_checker"></p>
+            <label for="">Address:</label><br>
+            <input type="text" id="userInput_address" class="userInputField" list="addresses" placeholder="Choose Your Address">
+            <p id="address_check" class="userInput_checker"></p>
+            <datalist id="addresses">
+                <option>Gondar</option>
+                <option>Addis Ababa</option>
+                <option>Bahir Dar</option>
+            </datalist><br><br>
+           <div class="btnContainer">
+            <input type="reset" value="Reset" id="resetBtn" class="formBtns">
+            <button type="submit"  id="submitBtn" class="formBtns">Submit</button>
+           </div>
+        </form>
+    </fieldset>
+    <script src="./Ethio Guzo JS.js"></script>
+</body>
+</html>

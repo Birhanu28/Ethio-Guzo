@@ -1,0 +1,85 @@
+body{
+    background: url(https://github.com/Birhanu28/Ethio-Guzo/blob/main/file_00000000b3cc61f8a67fa6a838434d24.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 115vh;
+    background-attachment: fixed;
+}
+fieldset{
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem auto;
+    background-color: rgba(245, 222, 179, 0.575);
+    border: hidden;
+    border-radius: 30px;
+}
+fieldset legend{
+    width: 40%;
+    border-radius: 0px 0px 30px 30px;
+    text-align: center;
+    font-size: 26px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    color: wheat;
+    cursor: default;
+    pointer-events: none;
+    background: linear-gradient(transparent, #eb8220);
+}
+fieldset label{
+    cursor: default;
+    font-family: serif;
+    font-size: clamp(15px, 20px, 30px);
+    margin: 15px;
+    color: brown;
+}
+.userInputField{
+    width: 84%;
+    height: 30px;
+    padding: 5px 14px;
+    margin: 10px;
+    outline: none;
+    font-family: georgia;
+    font-size: 17px;
+    background-color: #eb8220;
+    border: 2px solid brown;
+    border-radius: 30px;
+    color: white;
+}
+input[type="radio"] {
+    accent-color: #eb8220;
+}
+.userInput_checker{
+  backdrop-filter: blur(10px);
+  color: maroon;
+  margin: -8px 0px 5px 15px;
+}
+.btnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15%;
+}
+.formBtns{
+    font-family: georgia;
+    font-size: 15px;
+    color: brown;
+    background: transparent;
+    padding: 5px;
+    border: 3px solid brown;
+    width: 90px;
+    cursor: pointer;
+    margin-top: -30px;
+    transition: .6s;
+}
+.formBtns:hover{
+    background-color: brown;
+    color: wheat;
+    border: 3px hidden;
+}
+#resetBtn{
+    border-radius: 0px 0px 0px 25px;
+}
+#submitBtn{
+    border-radius: 0px 0px 25px 0px;
+}
